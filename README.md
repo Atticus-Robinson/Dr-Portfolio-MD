@@ -1,33 +1,33 @@
 
-  # Nepho
+  # Dr Portfolio MD
 
-  ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Description
-  Weather Dashboard
+  This program will take various user input related to a project and create a README.md file with that information.
 
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Contributing](#Contributing)
-  - [License](#Licensing)
+  - [Contributing](#contributing)
+  - [License](#licensing)
 
   ## Installation
   undefined
   
   ## Usage
-  None
+  To run the program; type node index into the terminal for the folder. After answering the prompts a README will be generated with the responses.
 
   ## Tests
-  NOne
+  Test the links included in the README to ensure they direct to the correct location. Also test the table of contents links to ensure that they link to the correct README sections.
 
   ## Contributing
-  Attucs
+  Atticus Robinson
 
   
   ## Licensing 
   Licensed under
-  [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0)
+  [MIT](https://opensource.org/licenses/MIT)
   
 
   ## Questions
@@ -36,5 +36,6 @@
   ##### Contact Me
 - Email [acerobinson2@gmail.com](mailto:acerobinson2@gmail.com)
 - Phone [4843505952](tel:4843505952)
+- Twitter [robinsonace](twitter.com/robinsonace)
 
   

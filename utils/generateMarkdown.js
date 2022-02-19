@@ -66,7 +66,6 @@ function renderLicenseSection(license) {
 function generateContact (object) {
   let string = `##### Contact Me\n`;
   let {Email, Phone, Twitter} = object;
-  console.log(Email, Phone, Twitter);
   if (Email) {
     string += `- Email [${Email}](mailto:${Email})\n`;
   }
