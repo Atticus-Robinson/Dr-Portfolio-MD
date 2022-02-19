@@ -73,7 +73,7 @@ function generateContact (object) {
     string += `- Phone [${Phone}](tel:${Phone})\n`
   }
   if (Twitter) {
-    string += `- Twitter [${Twitter}](twitter.com/${Twitter})\n`
+    string += `- Twitter [${Twitter}](https://twitter.com/${Twitter})\n`
   }
   return string;
 }

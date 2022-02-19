@@ -20,7 +20,7 @@ const questions = () => {
     },
     {
       type: "input",
-      name: "installtion",
+      name: "installation",
       message: "Enter installtion instuctions: ",
     },
     {
