@@ -1,41 +1,111 @@
-/*
 // TODO: Create a function that returns a license badge based on which license is passed in
-const generateBadge = (questionsData) => {
-}
+const generateBadgePrefix = (licenseString) => {
+  switch (licenseString) {
+    case "MIT":
+      return "License: MIT";
+    case "Apache-2.0":
+      return "License";
+    case "GPL-3.0":
+      return "License: GPL v3";
+    case "BSD-2-Clause":
+      return "License";
+    case "BSD-3-Clause":
+      return "License";
+    default:
+      return '';
+  }
+};
 
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+const generateBadgeLink = (licenseString) => {
+  switch (licenseString) {
+    case "MIT":
+      return "License-MIT-yellow";
+    case "Apache-2.0":
+      return "License-Apache_2.0-blue";
+    case "GPL-3.0":
+      return "License-GPLv3-blue";
+    case "BSD-2-Clause":
+      return "License-BSD_2--Clause-orange";
+    case "BSD-3-Clause":
+      return "License-BSD_3--Clause-blue";
+    default:
+      return '';
+  }
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  switch (license) {
+    case "MIT":
+      return "https://opensource.org/licenses/MIT";
+    case "Apache-2.0":
+      return "https://opensource.org/licenses/Apache-2.0";
+    case "GPL-3.0":
+      return "https://www.gnu.org/licenses/gpl-3.0";
+    case "BSD-2-Clause":
+      return "https://opensource.org/licenses/BSD-2-Clause";
+    case "BSD-3-Clause":
+      return "https://opensource.org/licenses/BSD-3-Clause";
+    default:
+      return '';
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
+function renderLicenseSection(license) {
+  if (!license) return '';
+  return `
+  ## Licensing 
+  Licensed under
+  [${license}](${renderLicenseLink(license)})
+  `
 }
 
-*/
-module.exports = (questionsData) => {
-  console.log(questionsData);
-  let {title, description, installation, usage, tests, contributing, username} = questionsData;
+function generateContact (object) {
+  let string = `##### Contact Me\n`;
+  let {Email, Phone, Twitter} = object;
+  console.log(Email, Phone, Twitter);
+  if (Email) {
+    string += `- Email [${Email}](mailto:${Email})\n`;
+  }
+  if (Phone) {
+    string += `- Phone [${Phone}](tel:${Phone})\n`
+  }
+  if (Twitter) {
+    string += `- Twitter [${Twitter}](twitter.com/${Twitter})\n`
+  }
+  console.log(string);
+  return string;
+}
+
+module.exports = (questionsData, socialObject) => {
+  let {
+    title,
+    license,
+    description,
+    installation,
+    usage,
+    tests,
+    contributing,
+    username,
+  } = questionsData;
   return `
   # ${title}
+
+  ![${generateBadgePrefix(
+    license
+  )}](https://img.shields.io/badge/${generateBadgeLink(license)}.svg)
 
   ## Description
   ${description}
 
   ## Table of Contents
-  - [Installtion](#installtion)
+  - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#lisence)
+  - [Contributing](#contributing)
+  - [License](#licensing)
 
   ## Installation
   ${installation}
@@ -49,9 +119,11 @@ module.exports = (questionsData) => {
   ## Contributing
   ${contributing}
 
+  ${renderLicenseSection(license)}
+
   ## Questions
+  Please find me through a method below for any questions or comments
   [GitHub](https://github.com/${username})
+  ${generateContact(socialObject)}
   `;
 };
-
-//module.exports = generateMarkdown;
