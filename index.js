@@ -89,7 +89,6 @@ function init() {
     //console.log(data);
     if (data.contact[0]) {
       let keyA = data.contact[0];
-      console.log(keyA);
       let a = await contactFill(keyA);
       contactObject[keyA] = a.fill;
       

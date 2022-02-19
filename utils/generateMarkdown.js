@@ -76,7 +76,6 @@ function generateContact (object) {
   if (Twitter) {
     string += `- Twitter [${Twitter}](twitter.com/${Twitter})\n`
   }
-  console.log(string);
   return string;
 }
 
