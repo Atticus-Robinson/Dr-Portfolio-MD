@@ -1,10 +1,11 @@
 
-  # Untitiled Project
+  # Dr ReadMe MD
 
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Description
   
+  This project is intended to take user input about a repository's information and generate a formatted README.md file with the information displayed.
 
   ## Table of Contents
   - [Installation](#installation)
@@ -13,17 +14,11 @@
   - [License](#licensing)
 
   ## Installation
+  To install the necessary tools for the program, open your integrated terminal for the project and run 'npm i' this will install Inquirer which is used to capture user input
   
+  ## Demo
   
-  ## Usage
-  
-
-  ## Tests
-  
-
-  ## Contributing
-  
-
+  [This](https://drive.google.com/file/d/1sKEOz6BFoW7wcjSSsj2dPUZ6KleX_8no/view?usp=sharing) is a link to a demo video displaying the functionality and usage of the program.
   
   ## Licensing 
   Licensed under
